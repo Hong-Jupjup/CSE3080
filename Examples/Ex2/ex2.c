@@ -3,7 +3,7 @@
 
 #define MAX 101
 
-int sum(int *list, int n);
+int sum(int*, int);
 
 int main()
 {
