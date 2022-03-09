@@ -1,0 +1,1 @@
+- Find the sum of the value of a list.
