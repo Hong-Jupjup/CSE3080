@@ -1,0 +1,1 @@
+- 'print1' is a function that prints out both the address of the i-th element and the value fount at this address.
