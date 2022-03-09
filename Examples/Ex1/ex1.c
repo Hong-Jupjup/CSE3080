@@ -41,5 +41,6 @@ int main()
             printf("%d ", sorted[i]);
         }
         printf("\n");
+        
     }
 }
