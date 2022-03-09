@@ -1,1 +1,1 @@
-- Malloc and Realloc
+- Use Malloc and Realloc to make one-dimensional arrays.
