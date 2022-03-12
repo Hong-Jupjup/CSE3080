@@ -60,59 +60,20 @@ polynomial p_add(polynomial p1, polynomial p2)
 
 void p_print(polynomial p)
 {
-    int i;
-
-    // 첫 항 처리.
-    if(p.coef[p.degree] == 1)
+    // No exception Handling.
+    int i, first_term = 1;
+    for(i=p.degree; i>=0; i--)
     {
-        printf("x^%d", p.degree);
-    }
-    else if(p.degree == 1)
-    {
-        printf("%dx", p.coef[p.degree]);
-    }
-    else if(p.degree == 0)
-    {
-        printf("%d", p.coef[p.degree]);
-    }
-    else
-    {
-        printf("%dx^%d", p.coef[p.degree], p.degree);
-    }
-
-    // 나머지 항 처리.
-    for(i=p.degree-1; i>=0; i--)
-    {
-        if(p.coef[i] == 0)
+        if(p.coef[i] != 0)
         {
-            continue;
-        }
-        else if(p.coef[i] == 1)
-        {
-            if(i == 0)
+            if(first_term)
             {
-                printf(" + 1");
+                printf("%dx^%d", p.coef[i], i);
+                first_term = 0;
             }
-            else if(i == 1)
-            {
-                printf(" + x");
+            else{
+                printf(" + %dx%d", p.coef[i], i);
             }
-            else
-            {
-                printf(" + x^%d", i);
-            }
-        }
-        else if(i == 1)
-        {
-            printf(" + %dx", p.coef[i]);
-        }
-        else if(i == 0)
-        {
-            printf(" + %d", p.coef[i]);
-        }
-        else
-        {
-            printf(" + %dx^%d", p.coef[i], i);
         }
     }
     printf("\n");
