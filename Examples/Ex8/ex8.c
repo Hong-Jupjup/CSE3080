@@ -60,7 +60,7 @@ polynomial p_add(polynomial p1, polynomial p2)
 
 void p_print(polynomial p)
 {
-    // No exception Handling.
+    // No exception handling.
     int i, first_term = 1;
     for(i=p.degree; i>=0; i--)
     {
