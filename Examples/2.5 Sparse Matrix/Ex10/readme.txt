@@ -1,0 +1,1 @@
+- Transpose a matrix that is representated in a dense representation.
