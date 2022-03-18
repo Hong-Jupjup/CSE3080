@@ -1,0 +1,1 @@
+- Make a program 'nfind' that mathces the last character of the pattern first, then match from the beginning.
