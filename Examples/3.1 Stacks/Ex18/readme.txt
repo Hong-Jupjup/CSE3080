@@ -1,0 +1,1 @@
+- Push, pop, stackFull, stackEmpty and printStack.
