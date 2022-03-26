@@ -17,7 +17,7 @@ int main()
 
 	/* get string from the file string.txt */
 	fp_str = fopen("string.txt", "r");
-	if(fp_str == NULL) { // if the file string.txt does not exsit, print the error message and quit the program.
+	if(fp_str == NULL) { // if the file string.txt does not exist, print the error message and quit the program.
 		printf("The string file does not exist.\n");
 		return 0;
 	}
@@ -58,7 +58,7 @@ void naive()
 		if(j == lastp) {
 			match_pos[n++] = start;
 		}
-		j = 0; // initialize j to zero in order to rewind the for-statement
+		j = 0; // initialize j to zero in order to rewind the for-loop
 	}
 
 	/* print the results into the file result_naive.txt */
