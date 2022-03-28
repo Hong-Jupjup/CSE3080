@@ -58,7 +58,7 @@ void naive()
 		if(j == lastp) {
 			match_pos[n++] = start;
 		}
-		j = 0; // initialize j to zero in order to rewind the for-loop
+		j = 0; // initialize j to zero in order to rewind the for-loop.
 	}
 
 	/* print the results into the file result_naive.txt */
