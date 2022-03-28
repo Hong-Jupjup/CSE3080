@@ -11,7 +11,7 @@ int failure[MAX_PATTERN];
 int match_pos[MAX_STRING] = {0, }; // the position where the pattern matches.
 
 void kmp();
-void fail();
+void fail(); 
 
 int main()
 {
