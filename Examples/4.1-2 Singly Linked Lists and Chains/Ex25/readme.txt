@@ -1,0 +1,1 @@
+- A linked list of Integers.
