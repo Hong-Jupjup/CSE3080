@@ -1,1 +1,1 @@
-- Dynamically Linked Stacks and Queues.
+- Dynamically Linked Stacks.
