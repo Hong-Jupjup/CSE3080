@@ -56,10 +56,8 @@ void p_add(int starta, int finisha, int startb, int finishb, int *startc, int *f
     float coefficient;
     *startc = avail;
 
-    while(starta <= finisha && startb <= finishb)
-    {
-        switch(COMPARE(terms[starta].expon, terms[startb].expon))
-        {
+    while(starta <= finisha && startb <= finishb) {
+        switch(COMPARE(terms[starta].expon, terms[startb].expon)) {
             case -1:
                 attach(terms[startb].coef, terms[startb].expon);
                 startb++;
@@ -67,8 +65,7 @@ void p_add(int starta, int finisha, int startb, int finishb, int *startc, int *f
 
             case 0:
                 coefficient = terms[starta].coef + terms[startb].coef;
-                if(coefficient != 0)
-                {
+                if(coefficient != 0) {
                     attach(coefficient, terms[starta].expon);
                 }
                 starta++;
@@ -83,12 +80,10 @@ void p_add(int starta, int finisha, int startb, int finishb, int *startc, int *f
     }
 
     // Add in remaining terms of A(X)
-    for(; starta <= finisha; starta++)
-    {
+    for(; starta <= finisha; starta++) {
         attach(terms[starta].coef, terms[starta].expon);
     }
-    for(; startb <= finishb; startb++)
-    {
+    for(; startb <= finishb; startb++) {
         attach(terms[startb].coef, terms[startb].expon);
     }
     *finishc = avail - 1;
@@ -97,8 +92,7 @@ void p_add(int starta, int finisha, int startb, int finishb, int *startc, int *f
 void attach(int coefficient, int exponent)
 {
     // Add a new term to the polynomial
-    if(avail >= MAX_TERMS)
-    {
+    if(avail >= MAX_TERMS) {
         fprintf(stderr, "TOO MANY TERMS IN THE POLYNOMIAL");
         exit(1);
     }
@@ -112,14 +106,11 @@ void p_print(int starta, int finisha)
     // No exception handling.
     int i;
 
-    for(i=starta; i<=finisha; i++)
-    {
-        if(i == starta)
-        {
+    for(i=starta; i<=finisha; i++) {
+        if(i == starta) {
             printf("%dx^%d", terms[i].coef, terms[i].expon);
         }
-        else
-        {
+        else {
             printf(" + %dx^%d", terms[i].coef, terms[i].expon);
         }
     }
