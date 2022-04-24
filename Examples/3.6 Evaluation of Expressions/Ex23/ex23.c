@@ -60,49 +60,49 @@ void postfix()
 }
 
 precedence getToken(char *symbol, int *n) {
-  *symbol = expr[(*n)++];
+    *symbol = expr[(*n)++];
 
-  switch(*symbol) {
-    case '(': return lparen;
-    case ')': return rparen;
-    case '+': return plus;
-    case '-': return minus;
-    case '/': return divide;
-    case '*': return times;
-    case '%': return mod;
-    case '\0': return eos;
-    default: return operand;
-  }
+    switch(*symbol) {
+        case '(': return lparen;
+        case ')': return rparen;
+        case '+': return plus;
+        case '-': return minus;
+        case '/': return divide;
+        case '*': return times;
+        case '%': return mod;
+        case '\0': return eos;
+        default: return operand;
+    }
 }
 
 void printToken(precedence token) {
-  switch(token) {
-    case lparen: printf("("); break;
-    case rparen: printf(")"); break;
-    case plus:   printf("+"); break;
-    case minus:  printf("-"); break;
-    case divide: printf("/"); break;
-    case times:  printf("*"); break;
-    case mod:    printf("%%"); break;
-  }
+    switch(token) {
+        case lparen: printf("("); break;
+        case rparen: printf(")"); break;
+        case plus:   printf("+"); break;
+        case minus:  printf("-"); break;
+        case divide: printf("/"); break;
+        case times:  printf("*"); break;
+        case mod:    printf("%%"); break;
+    }
 }
 
 void push(precedence item) {
-  if(top >= MAX_STACK_SIZE - 1) stackFull();
-  stack[++top] = item;
+    if(top >= MAX_STACK_SIZE - 1) stackFull();
+    stack[++top] = item;
 }
 
 precedence pop() {
-  if(top == -1) return stackEmpty();
-  return stack[top--];
+    if(top == -1) return stackEmpty();
+    return stack[top--];
 }
 
 void stackFull() {
-  fprintf(stderr, "stack is full, cannot add element.\n");
-  exit(EXIT_FAILURE);
+    fprintf(stderr, "stack is full, cannot add element.\n");
+    exit(EXIT_FAILURE);
 }
 
 precedence stackEmpty() {
-  fprintf(stderr, "stack is empty, cannot delete element.\n");
-  exit(EXIT_FAILURE);
+    fprintf(stderr, "stack is empty, cannot delete element.\n");
+    exit(EXIT_FAILURE);
 }
