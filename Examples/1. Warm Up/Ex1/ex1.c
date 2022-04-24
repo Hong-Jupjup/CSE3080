@@ -10,19 +10,15 @@ int main()
     int index = 0;
     int i, j, tmp;
 
-    while(1)
-    {
+    while(1){
         printf("Enter a number: ");
         scanf("%d", &input);
         unsorted[index] = input;
         sorted[index++] = input;
 
-        for(i=0; i<index-1; i++)
-        {
-            for(j=0; j<index-1-i; j++)
-            {
-                if(sorted[j]>sorted[j+1])
-                {
+        for(i=0; i<index-1; i++){
+            for(j=0; j<index-1-i; j++){
+                if(sorted[j]>sorted[j+1]){
                     tmp = sorted[j];
                     sorted[j] = sorted[j+1];
                     sorted[j+1] = tmp;
@@ -31,13 +27,11 @@ int main()
         }
 
         printf("unsorted: ");
-        for (i=0; i<index; i++)
-        {
+        for (i=0; i<index; i++){
             printf("%d ", unsorted[i]);
         }
         printf("\nsorted: ");
-        for(i=0; i<index; i++)
-        {
+        for(i=0; i<index; i++){
             printf("%d ", sorted[i]);
         }
         printf("\n");
