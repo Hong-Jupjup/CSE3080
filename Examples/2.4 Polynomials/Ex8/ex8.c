@@ -21,8 +21,7 @@ int main()
     // Initialize all coefficients to zero.
     p1.degree = -1;
     p2.degree = -1;
-    for(i=0; i<MAX_DEGREE; i++)
-    {
+    for(i=0; i<MAX_DEGREE; i++) {
         p1.coef[i] = 0;
         p2.coef[i] = 0;
     }
@@ -50,8 +49,7 @@ polynomial p_add(polynomial p1, polynomial p2)
 
     p3.degree = degree;
     
-    for(i=0; i<p3.degree; i++)
-    {
+    for(i=0; i<p3.degree; i++) {
         p3.coef[i] = p1.coef[i] + p2.coef[i];
     }
 
@@ -62,16 +60,13 @@ void p_print(polynomial p)
 {
     // No exception handling.
     int i, first_term = 1;
-    for(i=p.degree; i>=0; i--)
-    {
-        if(p.coef[i] != 0)
-        {
-            if(first_term)
-            {
+    for(i=p.degree; i>=0; i--) {
+        if(p.coef[i] != 0) {
+            if(first_term) {
                 printf("%dx^%d", p.coef[i], i);
                 first_term = 0;
             }
-            else{
+            else {
                 printf(" + %dx%d", p.coef[i], i);
             }
         }
