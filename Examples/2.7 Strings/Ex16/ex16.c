@@ -7,7 +7,7 @@ int nfind(char*, char*);
 int main()
 {
     char pat[] = "wo";
-    char str[] = "hello world I am a student.";
+    char str[] = "hellrworld";
     int rv;
 
     rv = nfind(str, pat);
