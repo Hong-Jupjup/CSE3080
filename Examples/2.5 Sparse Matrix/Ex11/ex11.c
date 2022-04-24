@@ -41,8 +41,8 @@ void printMatrix(term *m)
     int cols = m[0].col;
     int num_terms = m[0].value;
 
-    for(i=0; i<=rows; i++) {
-        for(j=0; j<=cols; j++) {
+    for(i=0; i<rows; i++) {
+        for(j=0; j<cols; j++) {
             if(iter <= num_terms && m[iter].row == i && m[iter].col == j) {
                 printf("%3d ", m[iter].value);
                 iter++;
