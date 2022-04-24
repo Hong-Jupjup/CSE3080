@@ -75,24 +75,24 @@ precedence getToken(char *symbol, int *n)
 }
 
 void push(int item) {
-  if(top >= MAX_STACK_SIZE - 1) stackFull();
-  stack[++top] = item;
-  //printf("item %d pushed to the stack.\n", item);
+    if(top >= MAX_STACK_SIZE - 1) stackFull();
+    stack[++top] = item;
+    //printf("item %d pushed to the stack.\n", item);
 }
 
 int pop() {
-  int rv;
-  if(top == -1) return stackEmpty();
-  rv = stack[top--];
-  //printf("item %d popped out of the stack.\n", rv);
-  return rv;
+    int rv;
+    if(top == -1) return stackEmpty();
+    rv = stack[top--];
+    //printf("item %d popped out of the stack.\n", rv);
+    return rv;
 }
 
 void stackFull() {
-  fprintf(stderr, "stack is full, cannot add element.\n");
-  exit(EXIT_FAILURE);
+    fprintf(stderr, "stack is full, cannot add element.\n");
+    exit(EXIT_FAILURE);
 }
 
 int stackEmpty() {
-  return -1;
+    return -1;
 }
