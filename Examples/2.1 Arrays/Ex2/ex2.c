@@ -11,8 +11,7 @@ int main()
     int input[MAX];
     int answer;
 
-    for(i=0; i<MAX; i++)
-    {
+    for(i=0; i<MAX; i++) {
         input[i] = i;
     }
 
@@ -33,8 +32,7 @@ int sum(int *list, int n)
 {
     int i, tmpsum = 0;
 
-    for(i=0; i<n; i++)
-    {
+    for(i=0; i<n; i++) {
         tmpsum += list[i];
     }
 
