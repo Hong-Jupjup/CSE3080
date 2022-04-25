@@ -38,6 +38,7 @@ int main()
     b1.dob.day = 25;
     b1.playerInfo.role = pitcher;
     b1.playerInfo.u.SO = 163;
+    b1.playerInfo.u.HR = 3;
 
     strcpy(b2.name, "Shin-Soo Choo");
     b2.age = 37;
@@ -47,7 +48,7 @@ int main()
     b2.dob.day = 13;
     b2.playerInfo.role = hitter;
     b2.playerInfo.u.HR = 24;
-
+    b2.playerInfo.u.SO = 170;
     printPlayerInfo(b1);
     printPlayerInfo(b2);
 }
