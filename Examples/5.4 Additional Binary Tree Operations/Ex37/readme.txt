@@ -1,0 +1,4 @@
+- The Satisfiability Problem
+- Write a function which builds a tree from an expression.
+    - First need to convert the infix notation to a postfix notation.
+    - For the 'NOT' operator(takes only one operand), put it as the right child of the operator.
