@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
 		/* Read the command */
 		if(fscanf(fp1, "%s", command) == EOF)
 			break;
-		
+
 		/* Command INSERT */
 		if(!strcmp(command, "INSERT")) {
 			fscanf(fp1, "%d", &insert_num);
