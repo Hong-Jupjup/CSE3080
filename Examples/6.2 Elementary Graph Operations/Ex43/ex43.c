@@ -282,13 +282,13 @@ int checkAp(int u)
         /* if u is non-root, then check whether it has a child w, where low[w] >= dfn[u]. */
         nodePointer ptr = graph[u];
         while(ptr) {
-            if(dfn[ptr->vertex] > dfn[u]) {
+        //    if(dfn[ptr->vertex] > dfn[u]) {
                 if(parent[ptr->vertex] == u) {
                     /* ptr->vertex is a child of u */
                     if(low[ptr->vertex] >= dfn[u])
                         return TRUE;
                 }
-            }
+        //    }
             ptr = ptr->link;
         }
         return FALSE;
