@@ -1,1 +1,1 @@
-- Single Source / All Destinations: Nonnegative Edge Costs
+- Dijkstra's Algorithm: Single Source / All Destinations: Nonnegative Edge Costs
