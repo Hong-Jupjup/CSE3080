@@ -1,0 +1,1 @@
+- Bellman-Ford algorithm: Single Source / All Destinations: General Weigths(including negative weights)
