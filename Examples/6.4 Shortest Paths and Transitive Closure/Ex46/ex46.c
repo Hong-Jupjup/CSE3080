@@ -42,8 +42,8 @@ int main()
 
 void createGraph() {
     int i, j;
-    numVertices = 7;
-    numEdges = 10;
+    numVertices = 5;
+    numEdges = 9;
     
     // cost adjacency matrix
     for(i=0; i<numVertices; i++) {
@@ -52,16 +52,15 @@ void createGraph() {
         }
     }
 
-    cost[0][1] = 6;
-    cost[0][2] = 5;
-    cost[0][3] = 5;
-    cost[1][4] = -1;
-    cost[2][1] = -2;
-    cost[2][4] = 1;
-    cost[3][2] = -2;
-    cost[3][5] = -1;
-    cost[4][6] = 3;
-    cost[5][6] = 3;
+    cost[0][1] = 4;
+    cost[0][3] = 2;
+    cost[1][2] = 2;
+    cost[1][3] = 3;
+    cost[1][4] = 3;
+    cost[3][1] = 1;
+    cost[3][2] = 4;
+    cost[3][4] = 5;
+    cost[4][2] = -5;
 }
 
 void createGraph2() {
