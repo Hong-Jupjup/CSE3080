@@ -80,8 +80,8 @@ int main()
     nodePointer np;
 
     /* adjacency list for vertex 0 */
-    np = (nodePointer)malloc(sizeof(struct node)); np->vertex = 0; np->link = NULL; graph[0] = np; prev = np;
-    np = (nodePointer)malloc(sizeof(struct node)); np->vertex = 1; np->link = NULL; prev->link = np;
+    np = (nodePointer)malloc(sizeof(struct node)); np->vertex = 1; np->link = NULL; graph[0] = np; prev = np;
+    np = (nodePointer)malloc(sizeof(struct node)); np->vertex = 2; np->link = NULL; prev->link = np;
 
     /* adjacency list for vertex 1 */
     np = (nodePointer)malloc(sizeof(struct node)); np->vertex = 0; np->link = NULL; graph[1] = np; prev = np;
